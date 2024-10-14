@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: orangered;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 80px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    border-bottom: 2px solid orangered;
+    color: orangered;
+}
+
+/* Main Container */
+.container {
+    display: flex; /* Use flexbox for layout */
+    margin-top: 100px; /* Ensure there's space for the fixed header */
+    padding: 20px;
+    width: 100%;
+    max-height: 115vh;
+}
+
+/* Skills Column */
+.skills-column {
+    width: 300px; /* Augmenter la largeur de la colonne */
+    padding: 20px;
+    background-color: white; /* Couleur de fond blanche pour un meilleur contraste */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre pour la profondeur */
+    margin-right: 20px; /* Espace entre la colonne et la section projet */
+    transition: box-shadow 0.3s ease; /* Transition douce pour l'ombre */
+}
+
+/* Hover effect for skills column */
+/* Skills Column */
+.skills-column {
+    width: 300px; /* Largeur de la colonne */
+    padding: 20px;
+    background-color: white; /* Couleur de fond blanche */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre */
+    margin-right: 20px; /* Espace entre la colonne et la section projet */
+}
+
+/* Hover effect for skills column */
+.skills-column:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre au survol */
+}
+
+.skills-column h2 {
+    padding-top: 30px;
+    font-size: 26px; /* Taille du titre */
+    margin-bottom: 15px; /* Espace sous le titre */
+    color: orangered; /* Couleur du titre */
+    text-align: center; /* Centrer le titre */
+    line-height: 1.5; /* Ajustez le nombre selon l'espace souhaité */
+    margin-bottom: 1em; /* Ajoute un espace en bas du paragraphe */
+}
+
+/* Style pour la liste des compétences */
+.skills-column ul {
+    list-style: none; /* Supprimer les puces */
+    padding-left: 5px; /* Supprimer le padding par défaut */
+}
+
+.skills-column ul > li {
+    margin-bottom: 20px; /* Espace entre les catégories de compétences */
+}
+
+.skills-column ul li > strong {
+    display: block; /* Afficher le titre de la compétence sur une nouvelle ligne */
+    margin-bottom: 10px; /* Espace sous le titre de la compétence */
+}
+
+/* Style pour les sous-listes */
+.skills-column ul ul {
+    list-style-type: disc; /* Style des puces pour les sous-listes */
+    padding-left: 20px; /* Indentation pour les sous-listes */
+}
+
+/* Style pour les éléments des sous-listes */
+.skills-column ul ul li {
+    margin-bottom: 5px; /* Espace entre les éléments des sous-listes */
+    font-size: 16px; /* Taille de police pour les sous-listes */
+    color: #555; /* Couleur pour un meilleur contraste */
+}
+
+/* Hover effect for list items */
+.skills-column ul ul li:hover {
+    color: orangered; /* Couleur du texte au survol */
+    cursor: pointer; /* Changer le curseur en pointeur */
+}
+
+
+
+
+/* Projects Section */
+.projects {
+    flex: 1; /* Allow this section to fill the remaining space */
+    padding: 20px;
+}
+
+.projects h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Project List for horizontal layout */
+.project-list {
+    display: flex; /* Use flexbox for project items */
+    gap: 20px; /* Space between project cards */
+    flex-wrap: wrap; /* Allow items to wrap if there is not enough space */
+}
+
+/* Project Item */
+.project-item {
+    position: relative; /* Position relative for the overlay effect */
+    width: calc(50% - 10px); /* Two cards per row with gap consideration */
+    border-radius: 8px;
+    overflow: hidden; /* Hide overflow from image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transition effect */
+}
+
+/* Hover Effect */
+.project-item:hover {
+    transform: scale(1.03); /* Slightly enlarge card on hover */
+}
+
+/* Image Style */
+.icon {
+    position: relative; /* Position relative for the text overlay */
+}
+
+.icon img {
+    width: 100%; /* Image will take the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space from images */
+}
+
+/* Project Content */
+.project-content {
+    padding: 20px; /* Add padding around text content */
+    background: white; /* Background for text content */
+    position: absolute; /* Position absolute for overlay */
+    bottom: 0; /* Align to the bottom of the card */
+    left: 0; /* Align to the left of the card */
+    right: 0; /* Align to the right of the card */
+    opacity: 0; /* Initially hide the content */
+    transition: opacity 0.3s ease; /* Transition effect for visibility */
+}
+
+/* Show project content on hover */
+.project-item:hover .project-content {
+    opacity: 1; /* Show the content on hover */
+}
+
+/* Project Content Text Style */
+.project-content h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+.project-content p {
+    color: #777;
+    line-height: 1.5;
+}
+
+.project-content span {
+    display: block;
+    font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+}
+
+/* Formation Section */
+.formation {
+    margin-top: 40px; /* Space above the formation section */
+}
+
+.formation h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.education-item {
+    background-color: white; /* Background for better contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside each education item */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin-bottom: 15px; /* Space between education items */
+    line-height: 1.6; /* Increase line height for better spacing */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .skills-column {
+        width: 100%; /* Full width on smaller screens */
+        margin-right: 0; /* Remove margin */
+    }
+
+    .project-item {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .project-list {
+        flex-direction: column; /* Stack project items vertically on smaller screens */
+    }
+
+    main {
+        padding: 100px 20px;
+    }
+
+    nav ul {
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .work {
+        flex-direction: column;
+    }
+
+    .workbox {
+        max-width: 100%;
+    }
+
+}
+
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}

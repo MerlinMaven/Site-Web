@@ -1,0 +1,343 @@
+/* General Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Popppins',sans-serif;
+}
+.contact{
+    position : relative;
+    padding: 50px 100px;
+    display :flex;
+    max-height: 80vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*background: url(1234.jpg);*/
+    background-color: #ffffff;
+    background-size: cover;
+    /* Adjust the value as needed */
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+
+}
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color:#333 ;
+}
+
+.contact .content p{
+    font-weight: 300;
+    color:#333 ;
+    line-height: 1.5; /* Ajustez le nombre selon l'espace souhaité */
+    margin-bottom: 1em;
+}
+
+.container{  
+    width:100%;
+    display:flex;
+    justify-content :center;
+    align-items: center;
+    margin-top:30px;
+}
+
+.container .contactInfo{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding:20px 0;
+    display: flex;}
+
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:  50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box  .text{
+    display:flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color:#333;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box  .text h3{
+   font-weight:500 ;
+   color: #00bcd4; 
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 35px;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom:  2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left:0;
+    padding: 5px 0;
+    font-size :16px;
+    margin : 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color:#00bcd4 ;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="Submit"]{
+    width: 100px;
+    background: orangered;
+    color: #fff;
+    border : none;
+    cursor : pointer;
+    padding : 10px;
+    font-size:18px ;
+    border-radius: 25px;
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(0,0,0,0.8); /* Dark navy blue */
+    color: white;
+    padding: 30px;
+    margin : 0px;
+    backdrop-filter: blur(10px);
+    }
+
+    .logo{
+        font-size: 30px;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        transition : 0.3s ease;
+        margin-left: 20px;
+    }
+    
+    .logo:hover{
+        color: orangered;
+        text-shadow: 0 0 25px orangered,
+                 0 0 50px orangered;
+        transform: scale(1.1);
+    }
+    
+    span{
+        color: orangered;
+    }
+
+/* Navigation Menu */
+nav {
+    padding: 20px;
+    position: absolute; /* Absolute positioning for right alignment */
+    top: 16px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+}
+
+nav ul {
+    list-style-type: none;
+    margin-right: 70px;
+    padding: 0px;
+    display: flex;  /* Make the navigation horizontal */
+    justify-content: center;  /* Center the navigation items */
+}
+
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    font-size: 18px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+   border-bottom: 1px solid orangered;
+    color: orangered;
+}
+
+
+
+button {
+    background-color: blue; /* Dark navy blue */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 40px;
+    width: 30%;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 320px;
+   }
+ 
+button:hover {
+    background-color: blue; /* Lighter navy */
+}
+
+footer {
+    background-color: #333; /* Couleur de fond sombre */
+    color: white;
+    padding: 10px;
+    display: flex; /* Active le layout flexbox */
+    justify-content: space-between; /* Espace entre le paragraphe et les icônes */
+    align-items: center; /* Centre verticalement le contenu */
+}
+
+footer img {
+    width: 30px;
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* Animation douce pour le mouvement */
+    margin-right: 10px;
+    filter: brightness(0) invert(1); /* Rendre les icônes blanches */
+}
+
+footer img:hover {
+    transform: scale(1.2); /* Agrandir l'icône au survol */
+}
+
+
+
+footer p {
+    margin: 0;
+    padding: 10px 10px;
+    text-align: center; /* Align text to the left */
+}
+
+footer div {
+    
+    display: flex; /* Flexbox to arrange icons horizontally */
+    gap: 10px; /* Space between icons */
+    
+   }
+
+/* Responsive Design */
+@media (max-width: 991px) {
+
+    .contact {
+        padding: 30px; /* Peut réduire le padding pour gagner plus d’espace */
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px; /* Ajouter un gap pour mieux séparer les éléments */
+    }
+
+    .container .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+
+    .contact .content h2 {
+        padding-top: 20px; /* Ajuste pour éviter un trop grand espace */
+        font-size: 28px; /* Diminuer légèrement la taille de la police pour les petits écrans */
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        background: #333;
+        color: #fff;
+        z-index: 1000; /* Assure que le footer soit toujours au-dessus du contenu */
+    }
+
+    /* Form styles for mobile */
+    .contactForm .inputBox input,
+    .contactForm .inputBox textarea {
+        font-size: 14px; /* Ajuste la taille du texte pour mobile */
+    }
+
+    button {
+        width: 100%; /* Pleine largeur pour les petits écrans */
+        margin-left: 0; /* Supprime la marge pour centrer le bouton */
+    }
+}
+
+/* Responsive Design for very small screens (below 576px) */
+@media (max-width: 576px) {
+    .contact{
+        padding-top: 350px;
+    }
+    .contact .content h2 {
+        font-size: 24px; /* Réduction supplémentaire pour très petits écrans */
+    }
+
+    .contactForm {
+        padding: 20px; /* Moins de padding pour mieux adapter l’espace */
+    }
+
+    .contactInfo .box .icon {
+        min-width: 50px;
+        height: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* Footer adjustments for very small screens */
+    footer p {
+        font-size: 14px;
+    }
+}
